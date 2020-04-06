@@ -1,197 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="71b34547-51d5-425d-b9ac-dd9ecbd3ea7c" name="Default Changelist" comment="（前端）：前端layuimini基本搭建完成">
-      <change afterPath="$PROJECT_DIR$/.idea/homestay.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/clear.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/init.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/layuimini.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/public.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/themes/white.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/bg.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/captcha.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/donate_qrcode.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/home.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/lay-config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/lay-module/echarts/echarts.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/lay-module/echarts/echartsTheme.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/lay-module/iconPicker/iconPickerFa.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/lay-module/layarea/layarea.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/lay-module/layuimini/miniAdmin.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/lay-module/layuimini/miniMenu.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/lay-module/layuimini/miniTab.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/lay-module/layuimini/miniTheme.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/lay-module/layuimini/miniTongji.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/lay-module/step-lay/step.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/lay-module/step-lay/step.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/lay-module/tableSelect/tableSelect.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/lay-module/treetable-lay/treetable.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/lay-module/treetable-lay/treetable.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/lay-module/wangEditor/fonts/w-e-icon.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/lay-module/wangEditor/wangEditor.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/lay-module/wangEditor/wangEditor.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/lay-module/wangEditor/wangEditor.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/lay-module/wangEditor/wangEditor.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/lay-module/wangEditor/wangEditor.min.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/font-awesome-4.7.0/HELP-US-OUT.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/font-awesome-4.7.0/css/font-awesome.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/font-awesome-4.7.0/css/font-awesome.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/font-awesome-4.7.0/fonts/FontAwesome.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/font-awesome-4.7.0/fonts/fontawesome-webfont.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/font-awesome-4.7.0/fonts/fontawesome-webfont.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/font-awesome-4.7.0/fonts/fontawesome-webfont.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/font-awesome-4.7.0/fonts/fontawesome-webfont.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/font-awesome-4.7.0/less/animated.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/font-awesome-4.7.0/less/bordered-pulled.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/font-awesome-4.7.0/less/core.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/font-awesome-4.7.0/less/fixed-width.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/font-awesome-4.7.0/less/font-awesome.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/font-awesome-4.7.0/less/icons.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/font-awesome-4.7.0/less/larger.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/font-awesome-4.7.0/less/list.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/font-awesome-4.7.0/less/mixins.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/font-awesome-4.7.0/less/path.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/font-awesome-4.7.0/less/rotated-flipped.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/font-awesome-4.7.0/less/screen-reader.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/font-awesome-4.7.0/less/stacked.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/font-awesome-4.7.0/less/variables.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/font-awesome-4.7.0/scss/_animated.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/font-awesome-4.7.0/scss/_bordered-pulled.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/font-awesome-4.7.0/scss/_core.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/font-awesome-4.7.0/scss/_fixed-width.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/font-awesome-4.7.0/scss/_icons.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/font-awesome-4.7.0/scss/_larger.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/font-awesome-4.7.0/scss/_list.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/font-awesome-4.7.0/scss/_mixins.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/font-awesome-4.7.0/scss/_path.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/font-awesome-4.7.0/scss/_rotated-flipped.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/font-awesome-4.7.0/scss/_screen-reader.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/font-awesome-4.7.0/scss/_stacked.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/font-awesome-4.7.0/scss/_variables.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/font-awesome-4.7.0/scss/font-awesome.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/jq-module/jquery.particleground.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/jq-module/paigusu.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/jq-module/zyupload/zyupload-1.0.0.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/jq-module/zyupload/zyupload-1.0.0.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/jquery-3.4.1/jquery-3.4.1.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/layui-v2.5.5/css/layui.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/layui-v2.5.5/css/layui.mobile.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/layui-v2.5.5/css/modules/code.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/layui-v2.5.5/css/modules/laydate/default/laydate.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/layui-v2.5.5/css/modules/layer/default/icon-ext.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/layui-v2.5.5/css/modules/layer/default/icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/layui-v2.5.5/css/modules/layer/default/layer.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/layui-v2.5.5/css/modules/layer/default/loading-0.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/layui-v2.5.5/css/modules/layer/default/loading-1.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/layui-v2.5.5/css/modules/layer/default/loading-2.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/layui-v2.5.5/font/iconfont.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/layui-v2.5.5/font/iconfont.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/layui-v2.5.5/font/iconfont.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/layui-v2.5.5/font/iconfont.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/layui-v2.5.5/font/iconfont.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/layui-v2.5.5/images/face/0.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/layui-v2.5.5/images/face/1.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/layui-v2.5.5/images/face/10.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/layui-v2.5.5/images/face/11.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/layui-v2.5.5/images/face/12.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/layui-v2.5.5/images/face/13.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/layui-v2.5.5/images/face/14.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/layui-v2.5.5/images/face/15.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/layui-v2.5.5/images/face/16.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/layui-v2.5.5/images/face/17.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/layui-v2.5.5/images/face/18.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/layui-v2.5.5/images/face/19.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/layui-v2.5.5/images/face/2.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/layui-v2.5.5/images/face/20.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/layui-v2.5.5/images/face/21.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/layui-v2.5.5/images/face/22.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/layui-v2.5.5/images/face/23.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/layui-v2.5.5/images/face/24.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/layui-v2.5.5/images/face/25.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/layui-v2.5.5/images/face/26.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/layui-v2.5.5/images/face/27.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/layui-v2.5.5/images/face/28.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/layui-v2.5.5/images/face/29.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/layui-v2.5.5/images/face/3.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/layui-v2.5.5/images/face/30.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/layui-v2.5.5/images/face/31.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/layui-v2.5.5/images/face/32.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/layui-v2.5.5/images/face/33.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/layui-v2.5.5/images/face/34.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/layui-v2.5.5/images/face/35.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/layui-v2.5.5/images/face/36.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/layui-v2.5.5/images/face/37.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/layui-v2.5.5/images/face/38.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/layui-v2.5.5/images/face/39.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/layui-v2.5.5/images/face/4.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/layui-v2.5.5/images/face/40.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/layui-v2.5.5/images/face/41.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/layui-v2.5.5/images/face/42.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/layui-v2.5.5/images/face/43.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/layui-v2.5.5/images/face/44.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/layui-v2.5.5/images/face/45.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/layui-v2.5.5/images/face/46.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/layui-v2.5.5/images/face/47.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/layui-v2.5.5/images/face/48.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/layui-v2.5.5/images/face/49.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/layui-v2.5.5/images/face/5.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/layui-v2.5.5/images/face/50.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/layui-v2.5.5/images/face/51.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/layui-v2.5.5/images/face/52.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/layui-v2.5.5/images/face/53.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/layui-v2.5.5/images/face/54.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/layui-v2.5.5/images/face/55.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/layui-v2.5.5/images/face/56.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/layui-v2.5.5/images/face/57.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/layui-v2.5.5/images/face/58.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/layui-v2.5.5/images/face/59.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/layui-v2.5.5/images/face/6.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/layui-v2.5.5/images/face/60.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/layui-v2.5.5/images/face/61.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/layui-v2.5.5/images/face/62.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/layui-v2.5.5/images/face/63.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/layui-v2.5.5/images/face/64.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/layui-v2.5.5/images/face/65.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/layui-v2.5.5/images/face/66.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/layui-v2.5.5/images/face/67.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/layui-v2.5.5/images/face/68.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/layui-v2.5.5/images/face/69.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/layui-v2.5.5/images/face/7.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/layui-v2.5.5/images/face/70.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/layui-v2.5.5/images/face/71.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/layui-v2.5.5/images/face/8.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/layui-v2.5.5/images/face/9.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/layui-v2.5.5/lay/modules/carousel.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/layui-v2.5.5/lay/modules/code.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/layui-v2.5.5/lay/modules/colorpicker.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/layui-v2.5.5/lay/modules/element.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/layui-v2.5.5/lay/modules/flow.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/layui-v2.5.5/lay/modules/form.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/layui-v2.5.5/lay/modules/jquery.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/layui-v2.5.5/lay/modules/laydate.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/layui-v2.5.5/lay/modules/layedit.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/layui-v2.5.5/lay/modules/layer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/layui-v2.5.5/lay/modules/laypage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/layui-v2.5.5/lay/modules/laytpl.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/layui-v2.5.5/lay/modules/mobile.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/layui-v2.5.5/lay/modules/rate.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/layui-v2.5.5/lay/modules/slider.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/layui-v2.5.5/lay/modules/table.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/layui-v2.5.5/lay/modules/transfer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/layui-v2.5.5/lay/modules/tree.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/layui-v2.5.5/lay/modules/upload.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/layui-v2.5.5/lay/modules/util.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/layui-v2.5.5/layui.all.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/layui-v2.5.5/layui.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/page/login.html" afterDir="false" />
+    <list default="true" id="71b34547-51d5-425d-b9ac-dd9ecbd3ea7c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/page/login-backup.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/page/welcome.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/init.json" beforeDir="false" afterPath="$PROJECT_DIR$/api/init.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/lay-module/layuimini/miniMenu.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/lay-module/layuimini/miniMenu.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/page/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/page/login.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -205,30 +21,66 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/jq-module/zyupload/zyupload-1.0.0.min.js">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/js/lay-module/layuimini/miniMenu.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="257">
+              <caret line="82" column="39" lean-forward="true" selection-start-line="82" selection-start-column="39" selection-end-line="82" selection-end-column="39" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/page/login.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="395">
+              <caret line="91" column="13" lean-forward="true" selection-start-line="91" selection-start-column="13" selection-end-line="91" selection-end-column="13" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/api/init.json">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="92">
-              <caret line="4" column="15" selection-start-line="4" selection-start-column="15" selection-end-line="4" selection-end-column="15" />
+            <state relative-caret-position="207">
+              <caret line="9" column="4" lean-forward="true" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/page/login.html">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/page/welcome.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="196">
+              <caret line="118" column="18" selection-start-line="118" selection-start-column="18" selection-end-line="118" selection-end-column="18" />
+              <folding>
+                <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>headerMenuHtml</find>
+      <find>welcome</find>
+      <find>数据统计</find>
+    </findStrings>
+    <replaceStrings>
+      <replace />
+    </replaceStrings>
+    <dirStrings>
+      <dir>E:\Homestay\homestay-web\homestay\js\lay-module\layuimini</dir>
+      <dir>E:\Homestay\homestay-web\homestay\js</dir>
+      <dir>E:\Homestay\homestay-web\homestay</dir>
+    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -237,16 +89,10 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/index.html" />
-      </list>
-    </option>
-  </component>
-  <component name="ProjectConfigurationFiles">
-    <option name="files">
-      <list>
-        <option value="$PROJECT_DIR$/.idea/homestay.iml" />
-        <option value="$PROJECT_DIR$/.idea/vcs.xml" />
-        <option value="$PROJECT_DIR$/.idea/misc.xml" />
-        <option value="$PROJECT_DIR$/.idea/modules.xml" />
+        <option value="$PROJECT_DIR$/page/login.html" />
+        <option value="$PROJECT_DIR$/js/lay-module/layuimini/miniMenu.js" />
+        <option value="$PROJECT_DIR$/api/init.json" />
+        <option value="$PROJECT_DIR$/page/welcome.html" />
       </list>
     </option>
   </component>
@@ -267,6 +113,11 @@
             <path>
               <item name="homestay" type="b2602c69:ProjectViewProjectNode" />
               <item name="homestay" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="homestay" type="b2602c69:ProjectViewProjectNode" />
+              <item name="homestay" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="homestay" type="b2602c69:ProjectViewProjectNode" />
@@ -306,6 +157,16 @@
       </list>
     </option>
   </component>
+  <component name="RunManager">
+    <configuration name="login.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63343/homestay/page/login.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.login.html" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -316,18 +177,27 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1586177320127</updated>
-      <workItem from="1586177321600" duration="1492000" />
+      <workItem from="1586177321600" duration="3058000" />
     </task>
+    <task id="LOCAL-00001" summary="（前端）：前端layuimini基本搭建完成">
+      <created>1586178916931</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1586178916931</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1492000" />
+    <option name="totallyTimeSpent" value="3058000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1050" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13636364" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" />
@@ -356,9 +226,6 @@
     <entry file="file://$PROJECT_DIR$/lib/jq-module/zyupload/zyupload-1.0.0.min.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/init.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="92">
@@ -366,8 +233,74 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/page/login-backup.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="9" column="47" selection-start-line="9" selection-start-column="47" selection-end-line="9" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/lay-module/layuimini/miniTab.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-621">
+          <caret line="15" column="17" lean-forward="true" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/lay-module/layuimini/miniTheme.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-483">
+          <caret line="12" column="11" lean-forward="true" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
+          <folding>
+            <element signature="n#style#0;n#span#0;n#div#0;n#a#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#1;n#div#0;n#a#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#1;n#a#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#1;n#div#1;n#a#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#a#0;n#div#2;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#a#1;n#div#2;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/lay-module/layuimini/miniMenu.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="257">
+          <caret line="82" column="39" lean-forward="true" selection-start-line="82" selection-start-column="39" selection-end-line="82" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/page/login.html">
-      <provider selected="true" editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="395">
+          <caret line="91" column="13" lean-forward="true" selection-start-line="91" selection-start-column="13" selection-end-line="91" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/init.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="9" column="4" lean-forward="true" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/page/welcome.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="118" column="18" selection-start-line="118" selection-start-column="18" selection-end-line="118" selection-end-column="18" />
+          <folding>
+            <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
   </component>
 </project>
