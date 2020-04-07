@@ -27,7 +27,7 @@
         .login-form .layui-form-item label {position:absolute;left:1px;top:1px;width:38px;line-height:36px;text-align:center;color:#d2d2d2;}
         .login-form .layui-form-item input {padding-left:36px;}
         .captcha {width:60%;display:inline-block;}
-        .captcha-img {display:inline-block;width:34%;float:right;}
+        .captcha-img {display:inline-block;width:34%;float:right;cursor:pointer;}
         .captcha-img img {height:34px;border:1px solid #e6e6e6;height:36px;width:100%;}
     </style>
 </head>
@@ -40,12 +40,12 @@
                     <h1>民宿预订管理系统</h1>
                 </div>
                 <div class="layui-form-item">
-                    <label class="layui-icon layui-icon-username" for="username"></label>
-                    <input type="text" name="username" lay-verify="required|account" placeholder="用户名或者邮箱" autocomplete="off" class="layui-input" value="admin">
+                    <label class="layui-icon layui-icon-username" for="adminUsername"></label>
+                    <input type="text" name="adminUsername" lay-verify="required|account" placeholder="用户名或者邮箱" autocomplete="off" class="layui-input" value="">
                 </div>
                 <div class="layui-form-item">
-                    <label class="layui-icon layui-icon-password" for="password"></label>
-                    <input type="password" name="password" lay-verify="required|password" placeholder="密码" autocomplete="off" class="layui-input" value="123456">
+                    <label class="layui-icon layui-icon-password" for="adminPassword"></label>
+                    <input type="password" name="adminPassword" lay-verify="required|password" placeholder="密码" autocomplete="off" class="layui-input" value="">
                 </div>
                 <div class="layui-form-item">
                     <label class="layui-icon layui-icon-vercode" for="captcha"></label>
@@ -67,6 +67,8 @@
 <script src="../lib/jquery-3.4.1/jquery-3.4.1.min.js" charset="utf-8"></script>
 <script src="../lib/layui-v2.5.5/layui.js" charset="utf-8"></script>
 <script src="../lib/jq-module/jquery.particleground.min.js" charset="utf-8"></script>
+<script src="../api/baseApi.js" charset="utf-8"></script>
+<script src="../api/loginAndLogoutApi.js" charset="utf-8"></script>
 <script>
     layui.use(['form'], function () {
         var form = layui.form,
@@ -85,6 +87,12 @@
 
         // 进行登录操作
         form.on('submit(login)', function (data) {
+
+            //加载中！
+            var loadIndex = layer.load(2,{
+                shade:[0.3,'#333']
+            });
+
             data = data.field;
             if (data.username == '') {
                 layer.msg('用户名不能为空');
@@ -98,9 +106,32 @@
                 layer.msg('验证码不能为空');
                 return false;
             }
-            layer.msg('登录成功', function () {
-                window.location = '../index.html';
-            });
+            console.log(data)
+            $.post({
+                url:loginUrl,
+                data:data,
+                dataType: "json",
+                timeout: 30000,
+                xhrFields:{withCredentials:true},
+                success: function(res){
+                    console.log(res)
+                    layer.close(loadIndex);
+                    if(res){
+                    //     layui.sessionData('loginUserDao',{
+                    //         key: 'loginUser',
+                    //         value: res.data.user
+                    //     });
+                    //
+                    //     //跳转 首页过2秒
+                        layer.msg('登录成功', function () {
+                            window.location = '../index.html';
+                        },3000);
+                    }else {
+                        layer.msg("登录失败，请重新登录");
+                        location.go(0);
+                    }
+                }
+            })
             return false;
         });
     });
