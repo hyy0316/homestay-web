@@ -1,0 +1,19 @@
+{
+  "code": 0,
+  "msg": "",
+  "count": 1000,
+  "data": [
+    {
+      "id": 10000,
+      "username": "hoh",
+      "sex": "13788007675",
+      "city": "1101",
+      "sign": "￥131.51",
+      "experience": 255,
+      "logins": 24,
+      "wealth": 82830700,
+      "classify": "预定中",
+      "score": 0
+    }
+  ]
+}
