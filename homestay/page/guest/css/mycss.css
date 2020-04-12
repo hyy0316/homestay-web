@@ -1,0 +1,48 @@
+bogy{
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    box-sizing: border-box;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #333;
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+    -webkit-appearance: none;
+}
+.tour-guides {
+     padding: 0px;
+    margin-bottom: 1%;
+}
+._13ennai4{
+    overflow-wrap: break-word !important;
+    font-size: 24px !important;
+    font-weight: 800 !important;
+    line-height: 1.25em !important;
+    color: rgb(72, 72, 72) !important;
+    padding-top: 2px !important;
+    padding-bottom: 2px !important;
+    margin: 0px !important;
+    font-family: Circular, PingFang-SC, "Hiragino Sans GB", 微软雅黑, "Microsoft YaHei", "Heiti SC" !important;
+}
+._zjunba {
+    -webkit-box-pack: justify !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    box-sizing: border-box;
+}
+._jro6t0 {
+    display: flex !important;
+}
+._e296pg {
+    position: relative !important;
+}
+._11dqbld7 {
+    overflow-wrap: break-word !important;
+    font-family: Circular, PingFang-SC, "Hiragino Sans GB", 微软雅黑, "Microsoft YaHei", "Heiti SC" !important;
+    font-size: 16px !important;
+    font-weight: 400 !important;
+    line-height: 1.375em !important;
+    color: rgb(72, 72, 72) !important;
+    margin: 0px !important;
+}

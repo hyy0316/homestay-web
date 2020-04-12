@@ -94,6 +94,20 @@
           ]
         },
         {
+          "title": "入住管理",
+          "href": "",
+          "icon": "fa fa-window-maximize",
+          "target": "_self",
+          "child": [
+            {
+              "title": "查看入住信息",
+              "href": "page/order-detatil.html",
+              "icon": "fa fa-tachometer",
+              "target": "_self"
+            }
+          ]
+        },
+        {
           "title": "评论管理",
           "href": "page/room-setting.html",
           "icon": "fa fa-window-maximize",

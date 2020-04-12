@@ -51,11 +51,11 @@
                                                 <div class="panel-body">
                                                     <div class="panel-title">
                                                         <span class="label pull-right layui-bg-blue">实时</span>
-                                                        <h5>用户统计</h5>
+                                                        <h5>今日新增订单</h5>
                                                     </div>
                                                     <div class="panel-content">
-                                                        <h1 class="no-margins">1234</h1>
-                                                        <small>当前分类总记录数</small>
+                                                        <h1 class="no-margins">3</h1>
+                                                        <small>今日新增的预订记录数</small>
                                                     </div>
                                                 </div>
                                             </div>
@@ -65,11 +65,11 @@
                                                 <div class="panel-body">
                                                     <div class="panel-title">
                                                         <span class="label pull-right layui-bg-cyan">实时</span>
-                                                        <h5>商品统计</h5>
+                                                        <h5>已处理订单</h5>
                                                     </div>
                                                     <div class="panel-content">
-                                                        <h1 class="no-margins">1234</h1>
-                                                        <small>当前分类总记录数</small>
+                                                        <h1 class="no-margins">1</h1>
+                                                        <small>当前已处理的订单总记录数</small>
                                                     </div>
                                                 </div>
                                             </div>
@@ -79,11 +79,11 @@
                                                 <div class="panel-body">
                                                     <div class="panel-title">
                                                         <span class="label pull-right layui-bg-orange">实时</span>
-                                                        <h5>浏览统计</h5>
+                                                        <h5>未处理订单</h5>
                                                     </div>
                                                     <div class="panel-content">
-                                                        <h1 class="no-margins">1234</h1>
-                                                        <small>当前分类总记录数</small>
+                                                        <h1 class="no-margins">4</h1>
+                                                        <small>当前未处理的订单总记录数</small>
                                                     </div>
                                                 </div>
                                             </div>
@@ -93,11 +93,11 @@
                                                 <div class="panel-body">
                                                     <div class="panel-title">
                                                         <span class="label pull-right layui-bg-green">实时</span>
-                                                        <h5>订单统计</h5>
+                                                        <h5>总订单数量</h5>
                                                     </div>
                                                     <div class="panel-content">
-                                                        <h1 class="no-margins">1234</h1>
-                                                        <small>当前分类总记录数</small>
+                                                        <h1 class="no-margins">5</h1>
+                                                        <small>所有订单总记录数</small>
                                                     </div>
                                                 </div>
                                             </div>
@@ -109,9 +109,74 @@
                     </div>
                     <div class="layui-col-md12">
                         <div class="layui-card">
-                            <div class="layui-card-header"><i class="fa fa-line-chart icon"></i>报表统计</div>
-                            <div class="layui-card-body">
-                                <div id="echarts-records" style="width: 100%;min-height:500px"></div>
+<!--                            <div class="layui-card-header"><i class="fa fa-line-chart icon"></i>报表统计</div>-->
+<!--                            <div class="layui-card-body">-->
+<!--                                <div id="echarts-records" style="width: 100%;min-height:500px"></div>-->
+<!--                            </div>-->
+                            <div class="layuimini-main">
+
+                                <fieldset class="table-search-fieldset">
+                                    <legend>搜索信息</legend>
+                                    <div style="margin: 10px 10px 10px 10px">
+                                        <form class="layui-form layui-form-pane" action="">
+                                            <div class="layui-form-item">
+                                                <div class="layui-inline">
+                                                    <label class="layui-form-label">客户姓名</label>
+                                                    <div class="layui-input-inline">
+                                                        <input type="text" name="username" autocomplete="off" class="layui-input">
+                                                    </div>
+                                                </div>
+                                                <div class="layui-inline">
+                                                    <label class="layui-form-label">客户电话</label>
+                                                    <div class="layui-input-inline">
+                                                        <input type="text" name="sex" autocomplete="off" class="layui-input">
+                                                    </div>
+                                                </div>
+                                                <div class="layui-inline">
+                                                    <label class="layui-form-label">订单号</label>
+                                                    <div class="layui-input-inline">
+                                                        <input type="text" name="city" autocomplete="off" class="layui-input">
+                                                    </div>
+                                                </div>
+                                                <div class="layui-inline">
+                                                    <label class="layui-form-label">房间号</label>
+                                                    <div class="layui-input-inline">
+                                                        <input type="text" name="classify" autocomplete="off" class="layui-input">
+                                                    </div>
+                                                </div>
+                                                <div class="layui-inline">
+                                                    <label class="layui-form-label">日期选择</label>
+                                                    <div class="layui-input-inline" >
+                                                        <input type="text" name="date" id="date" autocomplete="off" class="layui-input">
+                                                    </div>
+                                                    <div class="layui-form-mid">-</div>
+                                                    <div class="layui-input-inline" >
+                                                        <input type="text" name="date" id="date1" autocomplete="off" class="layui-input">
+                                                    </div>
+                                                </div>
+                                                <div class="layui-inline">
+                                                    <button type="submit" style="width: 85px;" class="layui-btn layui-btn-primary" lay-submit  lay-filter="data-search-btn"><i class="layui-icon"></i> 搜 索</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </fieldset>
+
+                                <script type="text/html" id="toolbarDemo">
+                                    <div class="layui-btn-container">
+                                        <button class="layui-btn layui-btn-sm data-add-btn" lay-event="add"> 添加订单 </button>
+                                        <button class="layui-btn layui-btn-sm layui-btn-danger data-delete-btn" lay-event="delete"> 删除订单 </button>
+                                    </div>
+                                </script>
+
+                                <table class="layui-hide" id="currentTableId" lay-filter="currentTableFilter"></table>
+
+                                <script type="text/html" id="currentTableBar">
+                                    <a class="layui-btn layui-btn-xs data-count-edit" lay-event="view">查看详情</a>
+                                    <a class="layui-btn layui-btn-xs data-count-edit" lay-event="edit">编辑</a>
+                                    <a class="layui-btn layui-btn-xs layui-btn-danger data-count-delete" lay-event="delete">删除</a>
+                                </script>
+
                             </div>
                         </div>
                     </div>
@@ -123,16 +188,54 @@
 <script src="../lib/layui-v2.5.5/layui.js" charset="utf-8"></script>
 <script src="../js/lay-config.js?v=1.0.4" charset="utf-8"></script>
 <script>
-    layui.use(['layer', 'miniTab','echarts'], function () {
+    layui.use(['layer', 'miniTab','echarts','form', 'table', 'laydate'], function () {
         var $ = layui.jquery,
             layer = layui.layer,
             miniTab = layui.miniTab,
-            echarts = layui.echarts;
+            echarts = layui.echarts,
+            form = layui.form,
+            table = layui.table,
+            laydate = layui.laydate;
 
         miniTab.listen();
 
+        //日期
+        laydate.render({
+            elem: '#date'
+        });
+        laydate.render({
+            elem: '#date1'
+        });
+
+        table.render({
+            elem: '#currentTableId',
+            url: '../api/order.json',
+            toolbar: '#toolbarDemo',
+            defaultToolbar: ['filter', 'exports', 'print', {
+                title: '提示',
+                layEvent: 'LAYTABLE_TIPS',
+                icon: 'layui-icon-tips'
+            }],
+            cols: [[
+                {type: "checkbox", width: 50, fixed: "left"},
+                {field: 'id', width: 90, title: '订单号', sort: true, minWidth: 90},
+                {field: 'username', width: 100, title: '客户姓名'},
+                {field: 'sex', width: 120, title: '电话', sort: true},
+                {field: 'city', width: 80, title: '房间号'},
+                {field: 'sign', width: 120,title: '金额'},
+                {field: 'experience', width: 120, title: '入住时间', sort: true},
+                {field: 'score', width: 120, title: '已收金额', sort: true},
+                {field: 'classify', width: 120, title: '订单状态'},
+                {field: 'wealth', width: 135, title: '操作人', sort: true},
+                {title: '操作', minWidth: 50, toolbar: '#currentTableBar', fixed: "right", align: "center"}
+            ]],
+            limits: [10, 15, 20, 25, 50, 100],
+            limit: 15,
+            page: true
+        });
+
         /**
-         * 查看公告信息
+         * 查看统计信息
          **/
         $('body').on('click', '.layuimini-notice', function () {
             var title = $(this).children('.layuimini-notice-title').text(),
@@ -161,6 +264,82 @@
                 }
             });
         });
+
+        // 监听搜索操作
+        form.on('submit(data-search-btn)', function (data) {
+            var result = JSON.stringify(data.field);
+            layer.alert(result, {
+                title: '最终的搜索信息'
+            });
+
+            //执行搜索重载
+            table.reload('currentTableId', {
+                page: {
+                    curr: 1
+                }
+                , where: {
+                    searchParams: result
+                }
+            }, 'data');
+
+            return false;
+        });
+
+        /**
+         * toolbar监听事件
+         */
+        table.on('toolbar(currentTableFilter)', function (obj) {
+            if (obj.event === 'add') {  // 监听添加操作
+                var index = layer.open({
+                    title: '添加用户',
+                    type: 2,
+                    shade: 0.2,
+                    maxmin:true,
+                    shadeClose: true,
+                    area: ['100%', '100%'],
+                    content: '/page/table/add.html',
+                });
+                $(window).on("resize", function () {
+                    layer.full(index);
+                });
+            } else if (obj.event === 'delete') {  // 监听删除操作
+                var checkStatus = table.checkStatus('currentTableId')
+                    , data = checkStatus.data;
+                layer.alert(JSON.stringify(data));
+            }
+        });
+
+        //监听表格复选框选择
+        table.on('checkbox(currentTableFilter)', function (obj) {
+            console.log(obj)
+        });
+
+        table.on('tool(currentTableFilter)', function (obj) {
+            var data = obj.data;
+            if (obj.event === 'edit') {
+
+                var index = layer.open({
+                    title: '编辑用户',
+                    type: 2,
+                    shade: 0.2,
+                    maxmin:true,
+                    shadeClose: true,
+                    area: ['100%', '100%'],
+                    content: '/page/table/edit.html',
+                });
+                $(window).on("resize", function () {
+                    layer.full(index);
+                });
+                return false;
+            } else if (obj.event === 'delete') {
+                layer.confirm('真的删除行么', function (index) {
+                    obj.del();
+                    layer.close(index);
+                });
+            }
+        });
+
+
 
         /**
          * 报表功能
@@ -225,7 +404,7 @@
         // echarts 窗口缩放自适应
         window.onresize = function(){
             echartsRecords.resize();
-        }
+        };
 
     });
 </script>
