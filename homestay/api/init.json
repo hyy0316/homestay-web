@@ -49,23 +49,9 @@
           "child": [
             {
               "title": "管理员设置",
-              "href": "",
+              "href": "page/admin/admin-list.html",
               "icon": "fa fa-tachometer",
-              "target": "_self",
-              "child": [
-                {
-                  "title": "查看管理员列表",
-                  "href": "page/admin/admin-list.html",
-                  "icon": "fa fa-tachometer",
-                  "target": "_self"
-                },
-                {
-                  "title": "设置管理员信息",
-                  "href": "page/admin/admin-setting.html",
-                  "icon": "fa fa-tachometer",
-                  "target": "_self"
-                }
-              ]
+              "target": "_self"
             },
             {
               "title": "客户管理",

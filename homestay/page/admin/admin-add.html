@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>民宿基本设置</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Access-Control-Allow-Origin" content="*">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="../../lib/layui-v2.5.5/css/layui.css" media="all">
+    <link rel="stylesheet" href="../../css/public.css" media="all">
+    <link rel="stylesheet" href="../../lib/jq-module/zyupload/zyupload-1.0.0.min.css" media="all">
+    <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
+    <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
+    <style>
+        .layui-form-item .layui-input-company {width: auto;padding-right: 10px;line-height: 38px;}
+    </style>
+</head>
+<body>
+<div class="layuimini-container">
+    <div class="layuimini-main">
+
+        <div class="layui-form layuimini-form">
+<!--            <div class="layui-form-item layui-hide">-->
+<!--                <label class="layui-form-label ">管理员编号</label>-->
+<!--                <div class="layui-input-block">-->
+<!--                    <input type="text" name="adminId"  class="layui-input">-->
+<!--                </div>-->
+<!--            </div>-->
+            <div class="layui-form-item">
+                <label class="layui-form-label required">管理员用户名</label>
+                <div class="layui-input-inline">
+                    <input type="text" name="adminUsername" id="adminUsername" lay-verify="required" lay-reqtext="管理员用户名不能为空" placeholder="请输入管理员用户名"  value="asd" class="layui-input">
+                </div>
+                <div class="layui-form-mid layui-word-aux">请务必填写用户名</div>
+            </div>
+
+            <div class="layui-form-item">
+                <label class="layui-form-label required">密码</label>
+                <div class="layui-input-inline">
+                    <input type="password" name="adminPassword" id="adminPassword" lay-verify="required" autocomplete="off"  value="asd" class="layui-input">
+                </div>
+
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">姓名</label>
+                <div class="layui-input-inline">
+                    <input type="text" name="adminName" id="adminName" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label required">手机号码</label>
+                <div class="layui-input-inline">
+                    <input type="tel" name="adminPhone" id="adminPhone" lay-verify="required|phone"  value="13788007675"  autocomplete="off" class="layui-input">
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <div class="layui-input-block">
+                    <button class="layui-btn" lay-submit="" lay-filter="setting">确认保存</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../../lib/jquery-3.4.1/jquery-3.4.1.min.js" charset="utf-8"></script>
+<script src="../../lib/layui-v2.5.5/layui.js" charset="utf-8"></script>
+<script src="../../lib/jq-module/zyupload/zyupload-1.0.0.min.js" charset="utf-8"></script>
+<script src="../../lib/jq-module/jquery.particleground.min.js" charset="utf-8"></script>
+<script src="../../api/baseApi.js" charset="utf-8"></script>
+<script src="../../api/adminApi.js" charset="utf-8"></script>
+<script>
+    layui.use(['form', 'layedit', 'laydate'], function () {
+        var form = layui.form
+            , layer = layui.layer
+            , layedit = layui.layedit
+            , laydate = layui.laydate,
+            $ = layui.$;
+
+        //跨域问题
+        //设置ajax全局参数
+        $.ajaxSetup({
+            //发送cookie
+            xhrFields: {
+                withCredentials: true
+            }
+        });
+        //创建一个编辑器
+        var editIndex = layedit.build('LAY_demo_editor');
+
+        //自定义验证规则
+        form.verify({
+            title: function (value) {
+                if (value.length < 5) {
+                    return '标题至少得5个字符啊';
+                }
+            }
+            , pass: [
+                /^[\S]{6,12}$/
+                , '密码必须6到12位，且不能出现空格'
+            ]
+            , content: function (value) {
+                layedit.sync(editIndex);
+            }
+        });
+
+        //监听提交
+        /// 记：后台用实体接收，
+        form.on('submit(setting)', function (data) {
+            var index = layer.alert(JSON.stringify(data.field), {
+                title: '最终的提交信息'
+            }, function () {
+
+                // 关闭弹出层
+                layer.close(index);
+
+                var iframeIndex = parent.layer.getFrameIndex(window.name);
+                parent.layer.close(iframeIndex);
+
+            });
+            console.log(data.field);
+            $.post({
+                url:insertAdminUrl,
+                data:data.field,
+                dataType: "json",
+                timeout: 30000,
+                // type: 'POST',
+                // contentType:"application/json",
+                // xhrFields:{withCredentials:true},
+                success:function (res) {
+                    console.log(res);
+                    // 关闭弹出层
+                    layer.close(index);
+                    if(res.success){
+                        parent.layer.msg("管理员添加成功",{time:1000},function(){
+                            //刷新父页面
+                            parent.location.reload();
+                        });
+                    }else {
+                        layer.msg(res.message);
+                    }
+                },
+                error: function(){
+                    console.log("22222222222222");
+                }
+            });
+            return false;
+        });
+
+    });
+
+</script>
+</body>
+</html>

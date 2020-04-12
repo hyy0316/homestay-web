@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <title>layui</title>
@@ -56,7 +56,8 @@
     layui.use(['form', 'table'], function () {
         var $ = layui.jquery,
             form = layui.form,
-            table = layui.table;
+            table = layui.table,
+            laypage = layui.laypage;
 
         //跨域问题
         //设置ajax全局参数
@@ -66,28 +67,51 @@
                 withCredentials: true
             }
         });
-
+        // laypage({
+        //     cont: 'demo5'
+        //     ,pages: 100
+        //     ,curr: location.hash.replace('#!fenye=', '') //获取hash值为fenye的当前页
+        //     ,hash: 'fenye' //自定义hash值
+        // });
 
         table.render({
             elem: '#adminTableId',
             url: AdminListUrl,
-            method:'post',
+            method: 'post',
             toolbar: '#toolbarDemo',
             defaultToolbar: ['filter', 'exports', 'print', {
                 title: '提示',
                 layEvent: 'LAYTABLE_TIPS',
                 icon: 'layui-icon-tips'
             }],
-            test:{
-                none:'查询不到数据'
+            test: {
+                none: '查询不到数据'
             },
+            // parseData: function (res) {
+            //     console.log(res);
+            //     console.log(this)
+            //     // var res = eval("(" + res + ")");
+            //     if (this.page.curr) {
+            //         var result = res.detatil.slice(this.limit * (this.page.curr - 1), this.limit * this.page.curr);
+            //     } else {
+            //         var result = res.detatil.slice(0, this.limit);
+            //     }
+            //
+            //     return {
+            //         "code": res.code,
+            //         "msg": res.msg,
+            //         "count": res.count,
+            //         "detatil": result
+            //     }
+            // },
+
             response: {
                 statusName: 'code',
                 statusCode: 0,
                 countName: 'count',
                 dataName: 'detail'
             },
-        cols: [[
+            cols: [[
                 {type: "checkbox", minWidth: 50, fixed: "left"},
                 {field: 'adminId', minWidth: 80, title: 'ID', sort: true},
                 {field: 'adminUsername', minWidth: 120, title: '管理员用户名'},
@@ -95,31 +119,33 @@
                 {field: 'adminName', minWidth: 100, title: '姓名'},
                 {field: 'adminPhone', title: '手机', minWidth: 120},
                 {field: 'createdTime', minWidth: 200, title: '创建时间', sort: true},
-                {field: 'updatedTime', minWidth:200, title: '更新时间', sort: true},
+                {field: 'updatedTime', minWidth: 200, title: '更新时间', sort: true},
                 {title: '操作', minWidth: 50, toolbar: '#currentTableBar', fixed: "right", align: "center"}
             ]],
-            limits: [10, 15, 20, 25, 50, 100],
-            limit: 15,
-            page: true
+            // limits: [10, 15, 20, 25, 50, 100],
+            limit: 5,
+            page: true,
+            done: function (res, curr, count) {
+                // console.log(res);
+                // console.log(curr);
+                // console.log(count);
+
+                // $('#totalProjectNumber').text("共有数据："+count+" 条");
+                // table_data=res.data;
+                // layer.closeAll('loading');
+                // layer.close(layer.index); //它获取的始终是最新弹出的某个层，值是由layer内部动态递增计算的
+                // layer.close(index);    //返回数据关闭loading
+            }
         });
-
+        //执行一个laypage实例
+        // laypage.render({
+        //     elem: 'adminTableId' //注意，这里的 test1 是 ID，不用加 # 号
+        //     , count: 5 //数据总数，从服务端得到
+        // });
         // 监听搜索操作
-        form.on('submit(data-search-btn)', function (data) {
-            var result = JSON.stringify(data.field);
-            layer.alert(result, {
-                title: '最终的搜索信息'
-            });
-
-            //执行搜索重载
-            table.reload('currentTableId', {
-                page: {
-                    curr: 1
-                }
-                , where: {
-                    searchParams: result
-                }
-            }, 'data');
-
+        form.on('submit(searchForm)', function (data) {
+            table.where = data.field;
+            table.reload("adminTableId",table);
             return false;
         });
 
@@ -132,10 +158,10 @@
                     title: '添加管理员',
                     type: 2,
                     shade: 0.2,
-                    maxmin:true,
+                    maxmin: true,
                     shadeClose: true,
                     area: ['100%', '100%'],
-                    content: '/page/table/add.html',
+                    content: '../admin/admin-add.html',
                 });
                 $(window).on("resize", function () {
                     layer.full(index);
@@ -160,7 +186,7 @@
                     title: '编辑管理员',
                     type: 2,
                     shade: 0.2,
-                    maxmin:true,
+                    maxmin: true,
                     shadeClose: true,
                     area: ['100%', '100%'],
                     content: '/page/table/edit.html',
@@ -178,8 +204,7 @@
         });
 
     });
-</script>
-<script>
+
 
 </script>
 
