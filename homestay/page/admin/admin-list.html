@@ -79,6 +79,7 @@
             url: AdminListUrl,
             method: 'post',
             toolbar: '#toolbarDemo',
+            loading: true,
             defaultToolbar: ['filter', 'exports', 'print', {
                 title: '提示',
                 layEvent: 'LAYTABLE_TIPS',
@@ -87,24 +88,6 @@
             test: {
                 none: '查询不到数据'
             },
-            // parseData: function (res) {
-            //     console.log(res);
-            //     console.log(this)
-            //     // var res = eval("(" + res + ")");
-            //     if (this.page.curr) {
-            //         var result = res.detatil.slice(this.limit * (this.page.curr - 1), this.limit * this.page.curr);
-            //     } else {
-            //         var result = res.detatil.slice(0, this.limit);
-            //     }
-            //
-            //     return {
-            //         "code": res.code,
-            //         "msg": res.msg,
-            //         "count": res.count,
-            //         "detatil": result
-            //     }
-            // },
-
             response: {
                 statusName: 'code',
                 statusCode: 0,
@@ -118,25 +101,50 @@
                 {field: 'adminPassword', minWidth: 120, title: '密码', sort: true},
                 {field: 'adminName', minWidth: 100, title: '姓名'},
                 {field: 'adminPhone', title: '手机', minWidth: 120},
-                {field: 'createdTime', minWidth: 200, title: '创建时间', sort: true},
-                {field: 'updatedTime', minWidth: 200, title: '更新时间', sort: true},
+                {field: 'createdTime', minWidth: 200, title: '创建时间', sort: true,templet: function (d) {
+                        return showTime(d.createdTime);
+                    }},
+                {field: 'updatedTime', minWidth: 200, title: '更新时间', sort: true,templet: function (d) {
+                        return showTime(d.updatedTime);
+                    }},
                 {title: '操作', minWidth: 50, toolbar: '#currentTableBar', fixed: "right", align: "center"}
             ]],
             // limits: [10, 15, 20, 25, 50, 100],
             limit: 5,
             page: true,
-            // done: function (res, curr, count) {
-                // console.log(res);
-                // console.log(curr);
-                // console.log(count);
+            done: function (res, curr, count) {
+                console.log(res);
+                console.log(curr);
+                console.log(count);
 
                 // $('#totalProjectNumber').text("共有数据："+count+" 条");
                 // table_data=res.data;
                 // layer.closeAll('loading');
                 // layer.close(layer.index); //它获取的始终是最新弹出的某个层，值是由layer内部动态递增计算的
                 // layer.close(index);    //返回数据关闭loading
-            // }
+            }
         });
+
+        //时间转换
+        function showTime(tempDate){
+            let d = new Date(tempDate);
+            let year = d.getFullYear();
+            let month = d.getMonth();
+            month++;
+            let day = d.getDate();
+            let hours = d.getHours();
+
+            let minutes = d.getMinutes();
+            let seconds = d.getSeconds();
+            month = month<10 ? "0"+month:month;
+            day = day<10 ? "0"+day:day;
+            hours = hours<10 ? "0"+hours:hours;
+            minutes = minutes<10 ? "0"+minutes:minutes;
+            seconds = seconds<10 ? "0"+seconds:seconds;
+            let time = year+"-"+month+"-"+day+" "+hours+":"+minutes+":"+seconds;
+            return time;
+        };
+
         //执行一个laypage实例
         // laypage.render({
         //     elem: 'adminTableId' //注意，这里的 test1 是 ID，不用加 # 号
@@ -162,6 +170,9 @@
                     shadeClose: true,
                     area: ['100%', '100%'],
                     content: '../admin/admin-add.html',
+                    end:function(){
+                        location.reload();
+                    },
                 });
                 $(window).on("resize", function () {
                     layer.full(index);

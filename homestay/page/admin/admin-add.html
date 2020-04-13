@@ -130,15 +130,20 @@
                 xhrFields:{withCredentials:true},
                 success:function (res) {
                     console.log(res);
-                    // 关闭弹出层
-                    layer.close(index);
+
                     if(res.success){
-                        parent.layer.msg("管理员添加成功",{time:1000},function(){
+                        var index = parent.layer.getFrameIndex(window.name); //获取窗口索引
+                        // parent.layer.close(index);
+                        // 关闭弹出层
+                        layer.close(index);
+                        parent.layer.msg("管理员添加成功",{time:3000},function(){
                             //刷新父页面
                             parent.location.reload();
+                            // location.get(-1);
                         });
                     }else {
-                        layer.msg(res.message);
+                        console.log(res.msg);
+                        layer.msg(res.msg,{time:3000});
                     }
                 },
                 error: function(){
