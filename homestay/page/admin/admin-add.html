@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="utf-8">
     <title>民宿基本设置</title>
@@ -10,8 +10,8 @@
     <link rel="stylesheet" href="../../lib/layui-v2.5.5/css/layui.css" media="all">
     <link rel="stylesheet" href="../../css/public.css" media="all">
     <link rel="stylesheet" href="../../lib/jq-module/zyupload/zyupload-1.0.0.min.css" media="all">
-    <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
-    <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
+<!--    <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>-->
+<!--    <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>-->
     <style>
         .layui-form-item .layui-input-company {width: auto;padding-right: 10px;line-height: 38px;}
     </style>
@@ -30,7 +30,7 @@
             <div class="layui-form-item">
                 <label class="layui-form-label required">管理员用户名</label>
                 <div class="layui-input-inline">
-                    <input type="text" name="adminUsername" id="adminUsername" lay-verify="required" lay-reqtext="管理员用户名不能为空" placeholder="请输入管理员用户名"  value="asd" class="layui-input">
+                    <input type="text" name="adminUsername"  lay-verify="required" lay-reqtext="管理员用户名不能为空" placeholder="请输入管理员用户名"  value="asvjhjd" class="layui-input">
                 </div>
                 <div class="layui-form-mid layui-word-aux">请务必填写用户名</div>
             </div>
@@ -38,20 +38,20 @@
             <div class="layui-form-item">
                 <label class="layui-form-label required">密码</label>
                 <div class="layui-input-inline">
-                    <input type="password" name="adminPassword" id="adminPassword" lay-verify="required" autocomplete="off"  value="asd" class="layui-input">
+                    <input type="password" name="adminPassword"  lay-verify="required" autocomplete="off"  value="1234657" class="layui-input">
                 </div>
 
             </div>
             <div class="layui-form-item">
                 <label class="layui-form-label">姓名</label>
                 <div class="layui-input-inline">
-                    <input type="text" name="adminName" id="adminName" class="layui-input">
+                    <input type="text" name="adminName" class="layui-input">
                 </div>
             </div>
             <div class="layui-form-item">
                 <label class="layui-form-label required">手机号码</label>
                 <div class="layui-input-inline">
-                    <input type="tel" name="adminPhone" id="adminPhone" lay-verify="required|phone"  value="13788007675"  autocomplete="off" class="layui-input">
+                    <input type="tel" name="adminPhone"  lay-verify="required|phone"  value="13788007675"  autocomplete="off" class="layui-input">
                 </div>
             </div>
 
@@ -107,26 +107,27 @@
         //监听提交
         /// 记：后台用实体接收，
         form.on('submit(setting)', function (data) {
-            var index = layer.alert(JSON.stringify(data.field), {
-                title: '最终的提交信息'
-            }, function () {
-
-                // 关闭弹出层
-                layer.close(index);
-
-                var iframeIndex = parent.layer.getFrameIndex(window.name);
-                parent.layer.close(iframeIndex);
-
-            });
+            // var index = layer.alert(JSON.stringify(data.field), {
+            //     title: '最终的提交信息'
+            // }, function () {
+            //
+            //     // 关闭弹出层
+            //     layer.close(index);
+            //
+            //     var iframeIndex = parent.layer.getFrameIndex(window.name);
+            //     parent.layer.close(iframeIndex);
+            //
+            // });
             console.log(data.field);
-            $.post({
+            console.log(JSON.stringify(data.field));
+            $.ajax({
                 url:insertAdminUrl,
                 data:data.field,
-                dataType: "json",
-                timeout: 30000,
-                // type: 'POST',
-                // contentType:"application/json",
-                // xhrFields:{withCredentials:true},
+                dataType: 'json',
+                // timeout: 30000,
+                type: 'post',
+                contentType: "application/x-www-form-urlencoded;charset=UTF-8",
+                xhrFields:{withCredentials:true},
                 success:function (res) {
                     console.log(res);
                     // 关闭弹出层

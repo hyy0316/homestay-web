@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="utf-8">
     <title>layui</title>
@@ -125,7 +125,7 @@
             // limits: [10, 15, 20, 25, 50, 100],
             limit: 5,
             page: true,
-            done: function (res, curr, count) {
+            // done: function (res, curr, count) {
                 // console.log(res);
                 // console.log(curr);
                 // console.log(count);
@@ -135,7 +135,7 @@
                 // layer.closeAll('loading');
                 // layer.close(layer.index); //它获取的始终是最新弹出的某个层，值是由layer内部动态递增计算的
                 // layer.close(index);    //返回数据关闭loading
-            }
+            // }
         });
         //执行一个laypage实例
         // laypage.render({
@@ -189,7 +189,7 @@
                     maxmin: true,
                     shadeClose: true,
                     area: ['100%', '100%'],
-                    content: '/page/table/edit.html',
+                    content: '/page/table/edit.html'
                 });
                 $(window).on("resize", function () {
                     layer.full(index);
