@@ -1,31 +1,18 @@
-<!--
-Author: W3layouts
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
--->
+
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
     <title>欢迎！</title>
-    <link href='http://fonts.useso.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic'
-          rel='stylesheet' type='text/css'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<!--    <link href='http://fonts.useso.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic'-->
+<!--          rel='stylesheet' type='text/css'>-->
     <link href="css/bootstrap.css" rel='stylesheet' type='text/css'/>
     <link href="css/style.css" rel="stylesheet" type="text/css" media="all"/>
     <link href="css/mycss.css" rel='stylesheet' type='text/css'/>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!--js-->
-    <script src="js/jquery.min.js"></script>
-
-    <!--/js-->
-    <!--animated-css-->
     <link href="css/animate.css" rel="stylesheet" type="text/css" media="all">
-    <script src="js/wow.min.js"></script>
-    <script>
-        new WOW().init();
-    </script>
-    <!--/animated-css-->
+    <link href="css/owl.carousel.css" rel="stylesheet">
+
 </head>
 <body>
 <!--header-->
@@ -41,45 +28,23 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             </div>
             <div class="menu">
                 <ul id="nav">
-                    <li><a href="#section-1">主页</a></li>
-                    <li><a href="#section-3">历史订单</a></li>
-                    <li><a href="#section-4">个人设置</a></li>
-                    <li><a href="./login.html">登录</a></li>
-                    <li><a href="./register.html">注册</a></li>
+                    <li><a href="#">主页</a></li>
+                    <li><a href="javascript:void(0);"onclick="historyOrder()">历史订单</a></li>
+                    <li><a href="javascript:void(0);"onclick="psersonalSetting()">个人设置</a></li>
+                    <li><a href="javascript:void(0);"onclick="login()">登录</a></li>
+                    <li><a href="javascript:void(0);"onclick="register()">注册</a></li>
                     <div class="clearfix"></div>
                 </ul>
             </div>
         </div>
         <div class="clearfix"></div>
-
-
     </div>
     <!--/container-->
 </div>
 <!--/sticky-->
 <!---banner--->
 <!----start-slider-script---->
-<script src="js/responsiveslides.min.js"></script>
-<script>
-    // You can also use "$(window).load(function() {"
-    $(function () {
-        // Slideshow 4
-        $("#slider4").responsiveSlides({
-            auto: true,
-            pager: true,
-            nav: true,
-            speed: 500,
-            namespace: "callbacks",
-            before: function () {
-                $('.events').append("<li>before event fired.</li>");
-            },
-            after: function () {
-                $('.events').append("<li>after event fired.</li>");
-            }
-        });
 
-    });
-</script>
 <div class="about section" id="section-2">
     <div class="about-head text-center">
         <h3>民宿简介</h3>
@@ -225,39 +190,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     </div>
 </div>
 <!-- Script for gallery Here-->
-<script type="text/javascript" src="js/jquery.mixitup.min.js"></script>
+
 <script type="text/javascript">
-    $(function () {
-        var filterList = {
-            init: function () {
-// MixItUp plugin
-// http://mixitup.io
-                $('#portfoliolist').mixitup({
-                    targetSelector: '.portfolio',
-                    filterSelector: '.filter',
-                    effects: ['fade'],
-                    easing: 'snap',
-                    // call the hover effect
-                    onMixEnd: filterList.hoverEffect()
-                });
-            },
-            hoverEffect: function () {
-// Simple parallax effect
-                $('#portfoliolist .portfolio').hover(
-                    function () {
-                        $(this).find('.label').stop().animate({bottom: 0}, 200, 'easeOutQuad');
-                        $(this).find('img').stop().animate({top: -30}, 500, 'easeOutQuad');
-                    },
-                    function () {
-                        $(this).find('.label').stop().animate({bottom: -40}, 200, 'easeInQuad');
-                        $(this).find('img').stop().animate({top: 0}, 300, 'easeOutQuad');
-                    }
-                );
-            }
-        };
-// Run the show!
-        filterList.init();
-    });
+
 </script>
 <!--Gallery Script Ends-->
 <!--/top-tours-->
@@ -301,21 +236,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             </div>
         </div>
     </div>
-    <link href="css/owl.carousel.css" rel="stylesheet">
-    <script src="js/owl.carousel.js"></script>
-    <script>
-        $(document).ready(function () {
-            $("#owl-demo").owlCarousel({
-                items: 1,
-                lazyLoad: true,
-                autoPlay: true,
-                navigation: false,
-                navigationText: false,
-                pagination: true,
-            });
-        });
-    </script>
-
 </div>
 
 </div>
@@ -323,9 +243,78 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <div class="copyright text-center">
     <p> Designed by yyhuang<a target="_blank" href="http://baidu.com/">&nbsp;民宿平台</a></p>
 </div>
+
+
+
+<script src="js/jquery.min.js"></script>
+<script src="js/wow.min.js"></script>
+<script type="text/javascript" src="js/jquery.mixitup.min.js"></script>
+<script src="js/responsiveslides.min.js"></script>
+<script src="js/owl.carousel.js"></script>
 <script src="js/jquery.scrollTo.js"></script>
 <script src="js/jquery.nav.js"></script>
 <script type="text/javascript">
+    function historyOrder() {
+        window.location.href = "historyOrder.html";
+    }
+    function psersonalSetting() {
+        window.location.href = "psersonalSetting.html";
+    }
+    function login() {
+        window.location.href = "login.html";
+    }
+    function register() {
+        window.location.href = "register.html";
+    }
+    $(function () {
+
+        // Slideshow 4
+        $("#slider4").responsiveSlides({
+            auto: true,
+            pager: true,
+            nav: true,
+            speed: 500,
+            namespace: "callbacks",
+            before: function () {
+                $('.events').append("<li>before event fired.</li>");
+            },
+            after: function () {
+                $('.events').append("<li>after event fired.</li>");
+            }
+        });
+
+        var filterList = {
+            init: function () {
+// MixItUp plugin
+// http://mixitup.io
+                $('#portfoliolist').mixitup({
+                    targetSelector: '.portfolio',
+                    filterSelector: '.filter',
+                    effects: ['fade'],
+                    easing: 'snap',
+                    // call the hover effect
+                    onMixEnd: filterList.hoverEffect()
+                });
+            },
+            hoverEffect: function () {
+// Simple parallax effect
+                $('#portfoliolist .portfolio').hover(
+                    function () {
+                        $(this).find('.label').stop().animate({bottom: 0}, 200, 'easeOutQuad');
+                        $(this).find('img').stop().animate({top: -30}, 500, 'easeOutQuad');
+                    },
+                    function () {
+                        $(this).find('.label').stop().animate({bottom: -40}, 200, 'easeInQuad');
+                        $(this).find('img').stop().animate({top: 0}, 300, 'easeOutQuad');
+                    }
+                );
+            }
+        };
+// Run the show!
+        filterList.init();
+
+    });
+
     $(document).ready(function () {
         $('#nav').onePageNav({
             begin: function () {
@@ -335,7 +324,19 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 console.log('stop')
             }
         });
+
+        $("#owl-demo").owlCarousel({
+            items: 1,
+            lazyLoad: true,
+            autoPlay: true,
+            navigation: false,
+            navigationText: false,
+            pagination: true,
+        });
     });
+</script>
+<script>
+    new WOW().init();
 </script>
 </body>
 </html>

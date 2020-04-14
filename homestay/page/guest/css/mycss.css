@@ -1,4 +1,4 @@
-bogy{
+bogy {
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     box-sizing: border-box;
     font-size: 14px;
@@ -10,11 +10,13 @@ bogy{
     font-family: 'Lato', sans-serif;
     -webkit-appearance: none;
 }
+
 .tour-guides {
-     padding: 0px;
+    padding: 0px;
     margin-bottom: 1%;
 }
-._13ennai4{
+
+._13ennai4 {
     overflow-wrap: break-word !important;
     font-size: 24px !important;
     font-weight: 800 !important;
@@ -25,18 +27,22 @@ bogy{
     margin: 0px !important;
     font-family: Circular, PingFang-SC, "Hiragino Sans GB", 微软雅黑, "Microsoft YaHei", "Heiti SC" !important;
 }
+
 ._zjunba {
     -webkit-box-pack: justify !important;
     display: flex !important;
     justify-content: space-between !important;
     box-sizing: border-box;
 }
+
 ._jro6t0 {
     display: flex !important;
 }
+
 ._e296pg {
     position: relative !important;
 }
+
 ._11dqbld7 {
     overflow-wrap: break-word !important;
     font-family: Circular, PingFang-SC, "Hiragino Sans GB", 微软雅黑, "Microsoft YaHei", "Heiti SC" !important;
@@ -46,3 +52,16 @@ bogy{
     color: rgb(72, 72, 72) !important;
     margin: 0px !important;
 }
+
+.tip {
+    color: #91949c;
+    font-size: 16px;
+    max-width: 265px;
+    margin: 35px auto;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
