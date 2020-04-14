@@ -3,7 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="71b34547-51d5-425d-b9ac-dd9ecbd3ea7c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/page/admin/admin-add.html" beforeDir="false" afterPath="$PROJECT_DIR$/page/admin/admin-add.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/adminApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/adminApi.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/init.json" beforeDir="false" afterPath="$PROJECT_DIR$/api/init.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/page/admin/admin-edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/page/admin/admin-edit.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/page/admin/admin-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/page/admin/admin-list.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -23,35 +25,35 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/api/adminApi.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="23">
-              <caret line="1" column="57" lean-forward="true" selection-start-line="1" selection-start-column="57" selection-end-line="1" selection-end-column="57" />
+            <state relative-caret-position="299">
+              <caret line="14" column="20" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="20" />
+              <folding>
+                <element signature="e#156#158#0" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/api/baseApi.js">
+        <entry file="file://$PROJECT_DIR$/page/admin/admin-edit.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="69">
-              <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+            <state relative-caret-position="1218">
+              <caret line="111" column="51" selection-start-line="111" selection-start-column="51" selection-end-line="111" selection-end-column="51" />
+              <folding>
+                <element signature="e#4529#6335#0" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/page/admin/admin-add.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
-              <caret line="125" column="33" lean-forward="true" selection-start-line="125" selection-start-column="33" selection-end-line="126" selection-end-column="34" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/page/admin/admin-list.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2300">
-              <caret line="148" column="25" selection-start-line="148" selection-start-column="25" selection-end-line="148" selection-end-column="25" />
+            <state relative-caret-position="666">
+              <caret line="271" column="39" lean-forward="true" selection-start-line="271" selection-start-column="39" selection-end-line="271" selection-end-column="39" />
+              <folding>
+                <element signature="e#5071#5733#0" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -88,10 +90,12 @@
       <find>报表统计</find>
       <find>请输入职业</find>
       <find>searchForm</find>
+      <find>var</find>
     </findStrings>
     <replaceStrings>
       <replace />
       <replace>管理员</replace>
+      <replace>let</replace>
     </replaceStrings>
     <dirStrings>
       <dir>E:\Homestay\homestay-web\homestay\js\lay-module\layuimini</dir>
@@ -124,19 +128,20 @@
         <option value="$PROJECT_DIR$/api/table.json" />
         <option value="$PROJECT_DIR$/page/admin-list.html" />
         <option value="$PROJECT_DIR$/page/admin/admin-setting.html" />
-        <option value="$PROJECT_DIR$/api/init.json" />
         <option value="$PROJECT_DIR$/page/table/add.html" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/page/login.html" />
-        <option value="$PROJECT_DIR$/page/admin/admin-list.html" />
-        <option value="$PROJECT_DIR$/api/adminApi.js" />
         <option value="$PROJECT_DIR$/page/admin/admin-add.html" />
+        <option value="$PROJECT_DIR$/api/init.json" />
+        <option value="$PROJECT_DIR$/api/adminApi.js" />
+        <option value="$PROJECT_DIR$/page/admin/admin-edit.html" />
+        <option value="$PROJECT_DIR$/page/admin/admin-list.html" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="858" />
-    <option name="y" value="256" />
+    <option name="x" value="662" />
+    <option name="y" value="23" />
     <option name="width" value="1314" />
     <option name="height" value="1032" />
   </component>
@@ -146,7 +151,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -174,6 +178,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -243,7 +248,8 @@
       <workItem from="1586429977295" duration="615000" />
       <workItem from="1586433023420" duration="28464000" />
       <workItem from="1586599788470" duration="50188000" />
-      <workItem from="1586784749737" duration="3710000" />
+      <workItem from="1586784749737" duration="23661000" />
+      <workItem from="1586862065280" duration="5715000" />
     </task>
     <task id="LOCAL-00001" summary="（前端）：前端layuimini基本搭建完成">
       <created>1586178916931</created>
@@ -294,11 +300,25 @@
       <option name="project" value="LOCAL" />
       <updated>1586714156735</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="（管理员）：！！！添加管理员功能已实现">
+      <created>1586788536311</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1586788536311</updated>
+    </task>
+    <task id="LOCAL-00009" summary="（管理员）：完成管理员添加，以及时间格式化">
+      <created>1586802079321</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1586802079321</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="116458000" />
+    <option name="totallyTimeSpent" value="142124000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -342,7 +362,8 @@
     <MESSAGE value="（首页）：添加客户页面模板文件" />
     <MESSAGE value="（首页）：添加客户页面" />
     <MESSAGE value="（管理员）：！！！添加管理员功能已实现" />
-    <option name="LAST_COMMIT_MESSAGE" value="（管理员）：！！！添加管理员功能已实现" />
+    <MESSAGE value="（管理员）：完成管理员添加，以及时间格式化" />
+    <option name="LAST_COMMIT_MESSAGE" value="（管理员）：完成管理员添加，以及时间格式化" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/lib/jq-module/zyupload/zyupload-1.0.0.min.js">
@@ -620,13 +641,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/page/admin/admin-edit.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
-          <caret line="25" column="18" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/api/guestApi.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -662,17 +676,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/init.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
-          <caret line="14" column="17" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
-          <folding>
-            <element signature="e#318#466#0" />
-            <element signature="e#476#998#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/api/table.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="69">
@@ -680,31 +683,58 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/page/admin/admin-list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2300">
-          <caret line="148" column="25" selection-start-line="148" selection-start-column="25" selection-end-line="148" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/adminApi.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
-          <caret line="1" column="57" lean-forward="true" selection-start-line="1" selection-start-column="57" selection-end-line="1" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/api/baseApi.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="69">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/init.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="46" column="42" lean-forward="true" selection-start-line="46" selection-start-column="42" selection-end-line="46" selection-end-column="42" />
+          <folding>
+            <element signature="e#318#466#0" />
+            <element signature="e#476#998#0" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/page/admin/admin-add.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="125" column="33" lean-forward="true" selection-start-line="125" selection-start-column="33" selection-end-line="126" selection-end-column="34" />
+        <state relative-caret-position="1471">
+          <caret line="119" column="18" lean-forward="true" selection-start-line="119" selection-start-column="18" selection-end-line="119" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/page/admin/admin-edit.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1218">
+          <caret line="111" column="51" selection-start-line="111" selection-start-column="51" selection-end-line="111" selection-end-column="51" />
+          <folding>
+            <element signature="e#4529#6335#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/adminApi.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="14" column="20" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="20" />
+          <folding>
+            <element signature="e#156#158#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/page/admin/admin-list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="666">
+          <caret line="271" column="39" lean-forward="true" selection-start-line="271" selection-start-column="39" selection-end-line="271" selection-end-column="39" />
+          <folding>
+            <element signature="e#5071#5733#0" />
+          </folding>
         </state>
       </provider>
     </entry>

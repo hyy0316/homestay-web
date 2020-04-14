@@ -43,7 +43,7 @@
         },
         {
           "title": "用户管理",
-          "href": "page/table.html",
+          "href": "",
           "icon": "fa fa-window-maximize",
           "target": "_self",
           "child": [

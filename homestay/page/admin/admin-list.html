@@ -67,12 +67,6 @@
                 withCredentials: true
             }
         });
-        // laypage({
-        //     cont: 'demo5'
-        //     ,pages: 100
-        //     ,curr: location.hash.replace('#!fenye=', '') //获取hash值为fenye的当前页
-        //     ,hash: 'fenye' //自定义hash值
-        // });
 
         table.render({
             elem: '#adminTableId',
@@ -110,6 +104,7 @@
                 {title: '操作', minWidth: 50, toolbar: '#currentTableBar', fixed: "right", align: "center"}
             ]],
             // limits: [10, 15, 20, 25, 50, 100],
+            id: 'testReload',
             limit: 5,
             page: true,
             done: function (res, curr, count) {
@@ -178,29 +173,75 @@
                     layer.full(index);
                 });
             } else if (obj.event === 'delete') {  // 监听删除操作
-                var checkStatus = table.checkStatus('currentTableId')
-                    , data = checkStatus.data;
-                layer.alert(JSON.stringify(data));
-            }
+                let checkStatus = table.checkStatus('testReload');
+                if(checkStatus.data.length==0){
+                    parent.layer.msg('请先选择要删除的数据行！', {icon: 2});
+                    return ;
+                }
+                let codeId = [];
+                // codeId =  checkStatus.data[0].adminId;
+                // let codeId= [];
+                for(let i=0;i<checkStatus.data.length;i++){
+                //     let amdinId = checkStatus.data[i].adminId;
+                //     codeId += checkStatus.data[i].adminId+",";
+                //     console.log(codeId)
+                //     codeId.push(amdinId);
+                    codeId.push(checkStatus.data[i].adminId);
+                }
+                // parent.layer.msg('删除中...', {icon: 16,shade: 0.3,time:5000});
+                // layer.alert(JSON.stringify(codeId));
+                // layer.alert(codeId);
+                console.log(JSON.stringify(codeId))
+                console.log(codeId)
+                layer.confirm("您确定要删除吗？"+JSON.stringify(codeId),function(){
+                    console.log(JSON.stringify(codeId))
+                    console.log(codeId)
+                    console.log({codeId})
+
+                    $.ajax({
+                        type:"post",
+                        url: deletebyAdminUrl,
+                        contentType: "application/x-www-form-urlencoded;charset=UTF-8",
+                        data:{"id":codeId},
+                        // dataType: 'json',
+                        xhrFields: {withCredentials: true},
+                        success:function (data) {
+                            layer.closeAll('loading');
+                            if(data.code==0){
+                                parent.layer.msg('删除成功！', {icon: 1,time:2000,shade:0.2});
+                                location.reload(true);
+                            }else{
+                                parent.layer.msg('删除失败！', {icon: 2,time:3000,shade:0.2});
+                            }
+                        }
+                    })
+                });
+            };
+
         });
 
         //监听表格复选框选择
         table.on('checkbox(currentTableFilter)', function (obj) {
-            console.log(obj)
+            // console.log(obj)
         });
 
         table.on('tool(currentTableFilter)', function (obj) {
-            var data = obj.data;
+            let data = obj.data;
             if (obj.event === 'edit') {
+                //把当前选中的行的数据保存到session中
+                layui.sessionData('adminData',{
+                    key:'admin',
+                    value: data
+                });
 
-                var index = layer.open({
+                let index = layer.open({
                     title: '编辑管理员',
                     type: 2,
                     shade: 0.2,
                     maxmin: true,
                     shadeClose: true,
                     area: ['100%', '100%'],
-                    content: '/page/table/edit.html'
+                    content: '../admin/admin-edit.html'
                 });
                 $(window).on("resize", function () {
                     layer.full(index);
@@ -208,7 +249,26 @@
                 return false;
             } else if (obj.event === 'delete') {
                 layer.confirm('真的删除行么', function (index) {
-                    obj.del();
+                    console.log(data.adminId);
+                    let adminId = data.adminId;
+                    $.ajax({
+                        type:"post",
+                        url: deletebyAdminUrl,
+                        contentType: "application/x-www-form-urlencoded;charset=UTF-8",
+                        data:{"id":adminId},
+                        // dataType: 'json',
+                        xhrFields: {withCredentials: true},
+                        success:function (data) {
+                            layer.closeAll('loading');
+                            if(data.code==0){
+                                layer.msg('删除成功！', {icon: 1,time:2000,shade:0.2});
+                                location.reload(true);
+                            }else{
+                                layer.msg('删除失败！', {icon: 2,time:3000,shade:0.2});
+                            }
+                        }
+                    })
+                    // obj.del();
                     layer.close(index);
                 });
             }
